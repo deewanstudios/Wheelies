@@ -10,3 +10,5 @@ $this->m_content_builder .= ' bikes are temporarily out of stock.</br>';
 $this->m_content_builder .= 'New stock expected by mid June 2020';
 $this->m_content_builder .= '</div>';
 $this->m_content_builder .= '</div>';
+
+// Hello world!!
