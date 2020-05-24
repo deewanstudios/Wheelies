@@ -7,12 +7,6 @@ $this->m_content_builder .= $this->m_pager;
 $this->m_content_builder .= '<!-- Shop Grid View-->';
 $this->m_content_builder .= '<div class="range section-66">';
 
-/* echo '<pre>';
-var_dump(count($this->m_category_products));
-echo '</pre>'; */
-// if ($this->m_category_products = !null) {
-# code...
-
 foreach ($this->m_category_products as $m_product) {
     $this->m_content_builder .= '<div class="cell-xs-6 cell-sm-6 cell-lg-4 section-bottom-98">';
 
@@ -61,8 +55,7 @@ foreach ($this->m_category_products as $m_product) {
     $this->m_content_builder .= "<img class=\"img-responsive product-image-area\" src=\"{$this->m_image_directory}products-images/{$m_product['image_path']}.jpg\" alt=\"\" width=\"\" height=\"\">";
     $this->m_content_builder .= '</div>';
     $this->m_content_builder .= '<!--Product Image Div Ends Here-->';
-    // var_dump($m_product['image_path']);
-
+    $this->m_content_builder .= '</a>';
     // Anchor tag closes here
     $this->m_content_builder .= '<!-- Product Title-->';
     $this->m_content_builder .= '<h5 class="product-title offset-top-20">';
@@ -182,9 +175,6 @@ foreach ($this->m_category_products as $m_product) {
     $this->m_content_builder .= '<!--Product Grid Item Ends Here-->';
     $this->m_content_builder .= '</div>';
 }
-/* } else {
-$this->m_content_builder .= "Product is currently out of stock";
-} */
 /* $this->m_content_builder .= "<!--products grid container-->"; */
 $this->m_content_builder .= '</div>';
 /*

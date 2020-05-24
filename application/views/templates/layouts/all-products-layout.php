@@ -8,10 +8,6 @@ $this->m_content_builder .= "<!-- Shop Grid View-->";
 $this->m_content_builder .= "<!-- Shop Grid View-->";
 $this->m_content_builder .= "<div class=\"range section-66\">";
 
-echo '<pre>';
-var_dump(count($this->m_category_products));
-echo '</pre>';
-
 foreach ($this->m_category_products as $bike_product) {
     // $this->m_content_builder .= "<a href=\"{$this->m_bike_product_category}";
     // $this->m_content_builder .= "<a href=\"bikes/{$this->m_bike_product_category}/product/";
