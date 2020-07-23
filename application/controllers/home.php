@@ -9,7 +9,7 @@ class Home extends Controller
 {
     public function __construct()
     {
-        $this->m_model = 'HomeModel';
+        $this->m_model   = 'HomeModel';
         $this->m_page_id = 1;
     }
 
@@ -22,9 +22,9 @@ class Home extends Controller
 
     private function MensTab()
     {
-        $this->m_cat_id = 4;
-        $this->m_param_id = 4;
-        $this->m_link_name = $this->m_loaded_model->GetFeaturedCategories($this->m_cat_id);
+        $this->m_cat_id        = 4;
+        $this->m_param_id      = 4;
+        $this->m_link_name     = $this->m_loaded_model->GetFeaturedCategories($this->m_cat_id);
         $this->m_section_image = $this->m_loaded_model->GetCallToActionImages($this->m_param_id);
 
         return array(
@@ -35,9 +35,9 @@ class Home extends Controller
 
     private function WomensTab()
     {
-        $this->m_cat_id = 3;
-        $this->m_param_id = 5;
-        $this->m_link_name = $this->m_loaded_model->GetFeaturedCategories($this->m_cat_id);
+        $this->m_cat_id        = 3;
+        $this->m_param_id      = 5;
+        $this->m_link_name     = $this->m_loaded_model->GetFeaturedCategories($this->m_cat_id);
         $this->m_section_image = $this->m_loaded_model->GetCallToActionImages($this->m_param_id);
 
         return array(
@@ -48,9 +48,9 @@ class Home extends Controller
 
     private function KidsTab()
     {
-        $this->m_cat_id = 9;
-        $this->m_param_id = 6;
-        $this->m_link_name = $this->m_loaded_model->GetFeaturedCategories($this->m_cat_id);
+        $this->m_cat_id        = 9;
+        $this->m_param_id      = 6;
+        $this->m_link_name     = $this->m_loaded_model->GetFeaturedCategories($this->m_cat_id);
         $this->m_section_image = $this->m_loaded_model->GetCallToActionImages($this->m_param_id);
 
         return array(
@@ -65,19 +65,19 @@ class Home extends Controller
     $this  ->  m_param_id  =  7;
     $this  ->  m_link_name  =  $this  ->  m_loaded_model  ->  GetFeaturedCategories  (  $this  ->  m_cat_id  );
     $this  ->  m_section_image  =  $this  ->  m_loaded_model  ->  GetCallToActionImages  (  $this  ->  m_param_id  );
-    
+
     $this  ->  m_debugger  =  $this  ->  Dumper  (  $this  ->  m_link_name  );
-    
+
     return array  (
     $this  ->  m_link_name  ,
     $this  ->  m_section_image
     );
-    
+
     } */
     private function SERacingTab()
     {
-        $this->m_cat_id = 12;
-        $this->m_param_id = 8;
+        $this->m_cat_id    = 12;
+        $this->m_param_id  = 8;
         $this->m_link_name = $this->m_loaded_model->GetFeaturedCategories($this->m_cat_id);
         // $this  ->  m_link_name  =  "seracing";
         $this->m_section_image = $this->m_loaded_model->GetCallToActionImages($this->m_param_id);
@@ -92,12 +92,12 @@ class Home extends Controller
 
     private function CallToActionSection()
     {
-        $this->m_section_content = array();
+        $this->m_section_content   = array();
         $this->m_section_content[] = $this->MensTab();
         $this->m_section_content[] = $this->WomensTab();
         $this->m_section_content[] = $this->KidsTab();
         // $this  ->  m_section_content  [  ]  =  $this  ->  BMXTab  (  );
-        $this->m_section_content[] = $this->SERacingTab();
+        $this->m_section_content[]   = $this->SERacingTab();
         $this->m_call_to_action_tabs = array_merge($this->m_section_content);
 
         // $this  ->  m_debugger  =  $this  ->  Dumper  (  $this  ->
@@ -107,7 +107,7 @@ class Home extends Controller
         // "Hello World";
         // $this  ->  m_loaded_model  ->  GetCallToActionImages  (  );
 
-        include VIEWS.'templates/layouts/call-to-action-layout.php';
+        include VIEWS . 'templates/layouts/call-to-action-layout.php';
 
         return $this->m_content_builder;
     }
